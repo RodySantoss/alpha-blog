@@ -1,0 +1,672 @@
+Started GET "/" for ::1 at 2020-09-30 13:28:35 -0300
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.7ms | Allocations: 407)
+Completed 200 OK in 25ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 2689)
+
+
+Started GET "/" for ::1 at 2020-09-30 13:29:31 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 78)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms | Allocations: 18951)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2020-09-30 13:30:38 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 73)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/rodrigo/workspace/rails/alpha-blog/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 2743ms
+Built at: 30/09/2020 13:30:44
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layouts/_messages.html.erb (Duration: 0.7ms | Allocations: 136)
+Completed 200 OK in 5809ms (Views: 5808.0ms | ActiveRecord: 0.0ms | Allocations: 5569)
+
+
+Started GET "/articles" for ::1 at 2020-09-30 13:31:00 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2277)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.9ms | Allocations: 6097)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such table: articles):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:     <%@articles.each do |article| %>
+    15:       <tr>
+    16:         <td><%=article.title%></td>
+    17:         <td><%=article.description%></td>
+  
+app/views/articles/index.html.erb:14
+Started GET "/articles" for ::1 at 2020-09-30 13:33:32 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 3953)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 23ms (Views: 18.6ms | ActiveRecord: 1.1ms | Allocations: 7942)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:20:58 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 78)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/rodrigo/workspace/rails/alpha-blog/public/packs
+[Webpacker] Hash: e708e594cf1d3fac6aa4
+Version: webpack 4.44.2
+Time: 5234ms
+Built at: 30/09/2020 15:21:07
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-51b8d1c0e36335a06074.js    655 KiB  application  [emitted] [immutable]  application
+js/application-51b8d1c0e36335a06074.js.map    768 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-51b8d1c0e36335a06074.js js/application-51b8d1c0e36335a06074.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 771 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 135)
+Completed 200 OK in 8400ms (Views: 8399.1ms | ActiveRecord: 0.0ms | Allocations: 43058)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:25:38 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 127)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 5207)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:27:29 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 65)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 127)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 5190)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:30:52 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 127)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 5215)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:34:22 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 299ms (Views: 298.4ms | ActiveRecord: 0.0ms | Allocations: 32240)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:36:21 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/rodrigo/workspace/rails/alpha-blog/public/packs
+[Webpacker] Hash: e708e594cf1d3fac6aa4
+Version: webpack 4.44.2
+Time: 1399ms
+Built at: 30/09/2020 15:36:25
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-51b8d1c0e36335a06074.js    655 KiB  application  [emitted] [immutable]  application
+js/application-51b8d1c0e36335a06074.js.map    768 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-51b8d1c0e36335a06074.js js/application-51b8d1c0e36335a06074.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 771 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 4195ms (Views: 4194.2ms | ActiveRecord: 0.0ms | Allocations: 5167)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:36:31 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 3942)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:36:36 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/rodrigo/workspace/rails/alpha-blog/public/packs
+[Webpacker] Hash: e708e594cf1d3fac6aa4
+Version: webpack 4.44.2
+Time: 1427ms
+Built at: 30/09/2020 15:36:40
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-51b8d1c0e36335a06074.js    655 KiB  application  [emitted] [immutable]  application
+js/application-51b8d1c0e36335a06074.js.map    768 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-51b8d1c0e36335a06074.js js/application-51b8d1c0e36335a06074.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 771 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 4267ms (Views: 4265.7ms | ActiveRecord: 0.0ms | Allocations: 5126)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:36:52 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/rodrigo/workspace/rails/alpha-blog/public/packs
+[Webpacker] Hash: d75caff6d04da72fb1c3
+Version: webpack 4.44.2
+Time: 1516ms
+Built at: 30/09/2020 15:36:56
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-6c25c245838cd10dbe75.js    654 KiB  application  [emitted] [immutable]  application
+js/application-6c25c245838cd10dbe75.js.map    767 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-6c25c245838cd10dbe75.js js/application-6c25c245838cd10dbe75.js.map
+[./app/javascript/channels/index.js] 115 bytes {application} [built]
+[./app/javascript/packs/application.js] 771 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 4266ms (Views: 4264.5ms | ActiveRecord: 0.0ms | Allocations: 5126)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:37:02 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/rodrigo/workspace/rails/alpha-blog/public/packs
+[Webpacker] Hash: e708e594cf1d3fac6aa4
+Version: webpack 4.44.2
+Time: 1533ms
+Built at: 30/09/2020 15:37:07
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-51b8d1c0e36335a06074.js    655 KiB  application  [emitted] [immutable]  application
+js/application-51b8d1c0e36335a06074.js.map    768 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-51b8d1c0e36335a06074.js js/application-51b8d1c0e36335a06074.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 771 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 4644ms (Views: 4642.6ms | ActiveRecord: 0.0ms | Allocations: 5133)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:38:25 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 77)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 67)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 5177)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:41:01 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 1.1ms | Allocations: 1016)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 6068)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%=if flash.any?%>
+    <%=flash.each do |name, msg|%>
+        <%msg%>
+    <%end%>
+<%end%>
+
+):
+1:    <%=if flash.any?%>
+2:        <%=flash.each do |name, msg|%>
+3:            <%msg%>
+4:        <%end%>
+5:    <%end%>
+  
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:48
+Started GET "/" for ::1 at 2020-09-30 15:41:22 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 1.1ms | Allocations: 1016)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 6100)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%=if flash.any? == true%>
+    <%=flash.each do |name, msg|%>
+        <%msg%>
+    <%end%>
+<%end%>
+
+):
+1:    <%=if flash.any? == true%>
+2:        <%=flash.each do |name, msg|%>
+3:            <%msg%>
+4:        <%end%>
+5:    <%end%>
+  
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:48
+Started GET "/articles" for ::1 at 2020-09-30 15:41:47 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1096)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.8ms | Allocations: 1003)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.6ms | Allocations: 6589)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%=if flash.any? == true%>
+    <%=flash.each do |name, msg|%>
+        <%msg%>
+    <%end%>
+<%end%>
+
+):
+1:    <%=if flash.any? == true%>
+2:        <%=flash.each do |name, msg|%>
+3:            <%msg%>
+4:        <%end%>
+5:    <%end%>
+  
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:48
+Started GET "/articles" for ::1 at 2020-09-30 15:42:32 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1070)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 6.6ms | Allocations: 1016)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.1ms | Allocations: 7099)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%=if flash.empty? == false%>
+    <%=flash.each do |name, msg|%>
+        <%msg%>
+    <%end%>
+<%end%>
+
+):
+1:    <%=if flash.empty? == false%>
+2:        <%=flash.each do |name, msg|%>
+3:            <%msg%>
+4:        <%end%>
+5:    <%end%>
+  
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/layouts/_messages.html.erb:5: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:48
+Started GET "/articles" for ::1 at 2020-09-30 15:42:48 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1069)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.9ms | Allocations: 1017)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms | Allocations: 7093)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%=flash.empty? == false%>
+    <%=flash.each do |name, msg|%>
+        <%msg%>
+    <%end%>
+<%end%>
+
+):
+1:    <%=flash.empty? == false%>
+2:        <%=flash.each do |name, msg|%>
+3:            <%msg%>
+4:        <%end%>
+5:    <%end%>
+  
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/_messages.html.erb:7: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/application.html.erb:48
+Started GET "/articles" for ::1 at 2020-09-30 15:42:55 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1069)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.5ms | Allocations: 151)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.2ms | Allocations: 6253)
+
+
+Started GET "/articles" for ::1 at 2020-09-30 15:43:09 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.7ms | Allocations: 151)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.1ms | Allocations: 6245)
+
+
+Started GET "/articles" for ::1 at 2020-09-30 15:45:10 -0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:14
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1070)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 161)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.2ms | Allocations: 6256)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:45:17 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 18)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 4592)
+
+
+Started GET "/" for ::1 at 2020-09-30 15:50:57 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.5ms | Allocations: 158)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 5328)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:00:57 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 168)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 163)
+Completed 200 OK in 310ms (Views: 308.6ms | ActiveRecord: 0.0ms | Allocations: 34416)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:01:53 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 61)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 315ms (Views: 314.3ms | ActiveRecord: 0.0ms | Allocations: 33956)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:02:21 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 300ms (Views: 299.2ms | ActiveRecord: 0.0ms | Allocations: 34402)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:02:31 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 299ms (Views: 297.8ms | ActiveRecord: 0.0ms | Allocations: 33942)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:03:43 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 272ms (Views: 270.9ms | ActiveRecord: 0.0ms | Allocations: 34352)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:10:07 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 158)
+Completed 200 OK in 296ms (Views: 294.7ms | ActiveRecord: 0.0ms | Allocations: 35154)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:12:15 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 61)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 333ms (Views: 332.6ms | ActiveRecord: 0.0ms | Allocations: 33930)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:12:26 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 308ms (Views: 307.3ms | ActiveRecord: 0.0ms | Allocations: 34238)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:13:05 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 18)
+Completed 200 OK in 321ms (Views: 320.6ms | ActiveRecord: 0.0ms | Allocations: 34033)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:20:22 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 168)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 157)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 5637)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:23:05 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 109)
+  Rendered layouts/_messages.html.erb (Duration: 0.5ms | Allocations: 157)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 5530)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:27:38 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 108)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 157)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 5535)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:28:51 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 108)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 157)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms | Allocations: 5533)
+
+
+Started GET "/" for ::1 at 2020-09-30 16:29:59 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 108)
+  Rendered layouts/_messages.html.erb (Duration: 0.7ms | Allocations: 157)
+Completed 200 OK in 324ms (Views: 322.9ms | ActiveRecord: 0.0ms | Allocations: 35536)
+
+
+Started GET "/" for ::1 at 2020-09-30 17:37:17 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 113)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 162)
+Completed 200 OK in 233ms (Views: 225.6ms | ActiveRecord: 0.0ms | Allocations: 30875)
+
+

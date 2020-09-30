@@ -1,0 +1,6 @@
+<%verify = flash.empty? %>
+<%if verify == false %>
+    <%=flash.each do |name, msg|%>
+        <%msg%>
+    <%end%>
+<%end%>
